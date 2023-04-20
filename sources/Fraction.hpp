@@ -26,13 +26,44 @@ class Fraction{
 
 
 
-Fraction operator+(const Fraction& other);
+Fraction operator+(const Fraction& other) const;
 
-Fraction operator-(const Fraction& c1, const Fraction& c2);
+Fraction operator-(const Fraction& other) const;
 
-Fraction operator*(const Fraction& c1, const Fraction& c2);
+Fraction operator*(const Fraction& other) const;
 
-Fraction operator/(const Fraction& c1, const Fraction& c2);
+Fraction operator/(const Fraction& other) const;
+
+bool operator==(const Fraction& other) const;
+
+bool operator<(const Fraction& other) const;
+
+bool operator>(const Fraction& other) const;
+
+bool operator>=(const Fraction& other) const;
+
+bool operator<=(const Fraction& other) const;
+
+
+
+friend std::ostream& operator<< (std::ostream& output, const Fraction& c);
+friend std::istream& operator>> (std::istream& input , Fraction& c);
+
+
+
+
+
+Fraction operator++();
+
+Fraction operator++(int a);
+
+Fraction operator--();
+
+Fraction operator--(int a);
+
+
+
+
 
 
 
