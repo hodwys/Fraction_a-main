@@ -5,117 +5,92 @@
 #include <sstream>
 #include <stdexcept>
 using namespace std;
-using namespace ariel;
+namespace ariel{
 
 class Fraction{
     private:
 
-        int Numerator
-        int Denominator
+        int Numerator;
+        int Denominator;
 
     public:
 
-    Fraction();
+  //  Fraction();
 
     Fraction(int a, int b);
-
+    Fraction(double c);
     int Get_Numerator();
     int Get_Denominator();
-    void Set_Numerator();
-    void Set_Denominator();
+    void Set_Numerator(int num);
+    void Set_Denominator(int den);
 
 
 
-Fraction operator+(const Fraction& other) const;
+    Fraction operator+(const Fraction& other);
 
-Fraction operator-(const Fraction& other) const;
+    Fraction operator-(const Fraction& other);
 
-Fraction operator*(const Fraction& other) const;
+    Fraction operator*(const Fraction& other);
 
-Fraction operator/(const Fraction& other) const;
+    Fraction operator*(const float other);
 
-bool operator==(const Fraction& other) const;
-
-bool operator<(const Fraction& other) const;
-
-bool operator>(const Fraction& other) const;
-
-bool operator>=(const Fraction& other) const;
-
-bool operator<=(const Fraction& other) const;
+    Fraction operator/(const Fraction& other);
 
 
 
-friend std::ostream& operator<< (std::ostream& output, const Fraction& c);
-friend std::istream& operator>> (std::istream& input , Fraction& c);
+    double operator+(double d);
+
+    double operator-(double d);
+
+    double operator*(double d);
+
+    
+    friend double operator+(double number, Fraction& f );
+    friend double operator-(double number,  Fraction& f);
+    friend double operator*(double number,  Fraction& f);
+    friend double operator/(double number,  Fraction& f);
+
+
+    bool operator==(const Fraction& other) const;
+
+    bool operator<(const Fraction& other) const;
+
+    bool operator>(const Fraction& other) const;
+
+    bool operator>=(const Fraction& other) const;
+
+    bool operator<=(const Fraction& other) const;
 
 
 
+    friend std::ostream& operator<< (std::ostream& output, const Fraction& c);
+    friend std::istream& operator>> (std::istream& input , Fraction& c);
 
 
-Fraction operator++();
+    Fraction operator++();
 
-Fraction operator++(int a);
+    Fraction operator++(int a);
 
-Fraction operator--();
+    Fraction operator--();
 
-Fraction operator--(int a);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    Fraction operator+(double number) ;
-    Fraction operator-(double number)  ;
-    Fraction operator*(double number)  ;
-    Fraction operator/(double number)  ;
-
-  
+    Fraction operator--(int a);
 
 
 
     
+
+};
 }
-
-
-
-
-
-
-
-
+    
 
 
 #endif
+
+
+
+
+
+
+  
+
+    // Fraction& operator--();
