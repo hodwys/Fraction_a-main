@@ -7,12 +7,12 @@ using namespace std;
 namespace ariel{
 
 
-Fraction :: Fraction(int a, int b){
-    this-> Numerator = a;
-    this-> Denominator = b;
+Fraction :: Fraction(int abc, int def){
+    this-> Numerator = abc;
+    this-> Denominator = def;
 }
 
-Fraction :: Fraction(double c){
+Fraction :: Fraction(double ){
 
 }
 
@@ -52,16 +52,16 @@ Fraction Fraction:: operator*(const Fraction& other){
 Fraction Fraction:: operator/(const Fraction& other){
     return Fraction(1,2);
 }
-double Fraction:: operator+(double d){
-    return 1.1;
+Fraction Fraction:: operator+(double jkl){
+    return Fraction(1,2);
 }
 
-double Fraction:: operator-(double d){
-    return 1.1;
+Fraction Fraction:: operator-(double jkl){
+    return Fraction(1,2);
 }
 
-double Fraction:: operator*(double d){
-    return 1.1;
+Fraction Fraction:: operator*(double jkl){
+    return Fraction(1,2);
 }
 
 
@@ -89,7 +89,7 @@ Fraction Fraction:: operator++(){
     return Fraction(1,2);
 }
 
-Fraction Fraction:: operator++(int a){
+Fraction Fraction:: operator++(int abc){
     return Fraction(1,2);
 }
 
@@ -97,14 +97,14 @@ Fraction Fraction:: operator--(){
     return Fraction(1,2);
 }
 
-Fraction Fraction:: operator--(int a){
+Fraction Fraction:: operator--(int abc){
     return Fraction(1,2);
 }
 
-std::ostream& operator<< (std::ostream& output, const Fraction& c){
+std::ostream& operator<< (std::ostream& output, const Fraction& ghi){
     return output;
 }
-std::istream& operator>> (std::istream& input , Fraction& c){
+std::istream& operator>> (std::istream& input , Fraction& ghi){
     return input;
 }
 
@@ -112,17 +112,17 @@ Fraction Fraction:: operator*(const float other){
     return Fraction(1,2);
 }
 
-double operator+(double number, Fraction& f ){
-    return 1.1;
+Fraction operator+(double number, Fraction& mno){
+    return Fraction(1,2);
 }
-double operator-(double number,  Fraction& f){
-    return 1.1;
+Fraction operator-(double number,  Fraction& mno){
+    return Fraction(1,2);
 }
-double operator*(double number,  Fraction& f){
-    return 1.1;
+Fraction operator*(double number,  Fraction& mno){
+    return Fraction(1,2);
 }
-double operator/(double number,  Fraction& f){
-    return 1.1;
+Fraction operator/(double number,  Fraction& mno){
+    return Fraction(1,2);
 }
 
 
