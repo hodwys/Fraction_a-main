@@ -6,13 +6,16 @@ using namespace std;
 #include "Fraction.hpp"
 namespace ariel{
 
-
+// 240999
 Fraction :: Fraction(int abc, int def){
+    if(def == 0){
+        throw std ::invalid_argument ("Division_by_0");
+    }
     this-> Numerator = abc;
     this-> Denominator = def;
 }
 
-Fraction :: Fraction(double ){
+Fraction :: Fraction(double def){
 
 }
 
@@ -32,17 +35,34 @@ void Fraction:: Set_Numerator(int num){
 }
 
 void Fraction:: Set_Denominator(int den){
+     if(den == 0){
+        throw std :: invalid_argument("Division_by_0");
+     }
     this->Denominator = den;
 }
 
 
-Fraction Fraction::operator+(const Fraction& other){
-    return Fraction(1,2);
+Fraction Fraction::operator+(Fraction& other){
+
+    Fraction temp(0,1); 
+    int den = (this->Denominator * other.Get_Denominator());
+    int num = ((this->Numerator * other.Get_Denominator()) + (this->Denominator * other.Get_Numerator()));
+    int gcd = std::__gcd((num) , (den) );
+    temp.Set_Numerator(num / gcd);
+    temp.Set_Denominator(den / gcd);
+    return temp;
+
 }
 
 
 Fraction Fraction:: operator-(const Fraction& other){
-    return Fraction(1,2);
+    Fraction temp(0,1); 
+    int den = (this->Denominator * other.Get_Denominator());
+    int num = ((this->Numerator * other.Get_Denominator()) - (this->Denominator * other.Get_Numerator()));
+    int gcd = std::__gcd((num) , (den) );
+    temp.Set_Numerator(num / gcd);
+    temp.Set_Denominator(den / gcd);
+    return temp;
 }
 
 Fraction Fraction:: operator*(const Fraction& other){

@@ -26,7 +26,7 @@ class Fraction{
 
 
 
-    Fraction operator+(const Fraction& other);
+    Fraction operator+(Fraction& other);
 
     Fraction operator-(const Fraction& other);
 

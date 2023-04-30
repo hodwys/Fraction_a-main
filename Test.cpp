@@ -16,12 +16,6 @@ TEST_CASE("Get and Set"){
 
 }
 
-TEST_CASE("/0"){
-
-    Fraction x(7,8);
-    CHECK_THROWS(x.Set_Denominator(0));
-    CHECK_THROWS(Fraction(1,0));
-}
 
 
 TEST_CASE("Test + "){
@@ -57,6 +51,18 @@ TEST_CASE("Test * "){
     Fraction z = x*y;
     CHECK(z == 2.625);
 }
+
+
+TEST_CASE("/0"){
+
+    CHECK_THROWS(Fraction(1,0));
+
+    Fraction x(7,8);
+    Fraction y(0/3);
+    CHECK_THROWS(x/y);
+
+}
+
 
 TEST_CASE("Test ++ "){
 //2
