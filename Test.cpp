@@ -1,6 +1,6 @@
 #include "doctest.h"
 #include <iostream>
-#include "Fraction.hpp"
+#include "sources/Fraction.hpp"
 using namespace ariel;
 using namespace std;
 
@@ -15,7 +15,6 @@ TEST_CASE("Get and Set"){
     CHECK(x.Get_Numerator() == 10);
 
 }
-
 
 
 TEST_CASE("Test + "){
