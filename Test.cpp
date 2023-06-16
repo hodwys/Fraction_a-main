@@ -16,7 +16,6 @@ TEST_CASE("Get and Set"){
 
 }
 
-
 TEST_CASE("Test + "){
     Fraction x(7,8);
     Fraction y(3,1);
@@ -89,8 +88,6 @@ TEST_CASE("Test -- "){
 
 
 }
-
-
 
 TEST_CASE("Test >,<,>=,<="){
     Fraction x(1,1);
