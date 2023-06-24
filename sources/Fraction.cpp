@@ -56,12 +56,12 @@ Fraction Fraction::operator+(Fraction& other){
 
 
 Fraction Fraction:: operator-(const Fraction& other){
-    Fraction temp(0,1); 
-    int den = (this->Denominator * other.Get_Denominator());
-    int num = ((this->Numerator * other.Get_Denominator()) - (this->Denominator * other.Get_Numerator()));
-    int gcd = std::__gcd((num) , (den) );
-    temp.Set_Numerator(num / gcd);
-    temp.Set_Denominator(den / gcd);
+     Fraction temp(0,1); 
+    // int den = (this->Denominator * other.Get_Denominator());
+    // int num = ((this->Numerator * other.Get_Denominator()) - (this->Denominator * other.Get_Numerator()));
+    // int gcd = std::__gcd((num) , (den) );
+    // temp.Set_Numerator(num / gcd);
+    // temp.Set_Denominator(den / gcd);
     return temp;
 }
 
